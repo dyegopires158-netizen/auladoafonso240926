@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Calculadora de soma de dois números.">
+    <title>Calculadora de Soma</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="calculator" aria-labelledby="page-title">
+        <header class="calculator__header">
+            <p class="calculator__eyebrow">Ferramenta simples e prática</p>
+            <h1 id="page-title">Calculadora de Soma</h1>
+            <p>Digite dois números e descubra o resultado da soma.</p>
+        </header>
+
+        <form id="sum-form" novalidate>
+            <div class="field">
+                <label for="first-number">Primeiro número</label>
+                <input
+                    id="first-number"
+                    name="firstNumber"
+                    type="number"
+                    step="any"
+                    inputmode="decimal"
+                    placeholder="Ex.: 10"
+                    autocomplete="off"
+                    required
+                >
+            </div>
+
+            <div class="field">
+                <label for="second-number">Segundo número</label>
+                <input
+                    id="second-number"
+                    name="secondNumber"
+                    type="number"
+                    step="any"
+                    inputmode="decimal"
+                    placeholder="Ex.: 25"
+                    autocomplete="off"
+                    required
+                >
+            </div>
+
+            <p id="error-message" class="error-message" role="alert" aria-live="polite"></p>
+
+            <div class="button-group">
+                <button class="button button--primary" type="submit">Somar</button>
+                <button class="button button--secondary" id="clear-button" type="reset">Limpar</button>
+            </div>
+        </form>
+
+        <section class="result" aria-labelledby="result-title">
+            <h2 id="result-title">Resultado</h2>
+            <output id="result" for="first-number second-number" aria-live="polite">0</output>
+        </section>
+
+        <footer class="calculator__footer">
+            <p>Desenvolvido por <strong>Dyego Brayan Pires Farias da Rocha</strong></p>
+            <p>RGM: <strong>26110655</strong></p>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
